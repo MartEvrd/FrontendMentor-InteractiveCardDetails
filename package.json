@@ -1,0 +1,20 @@
+{
+  "name": "interactive-card-details-form-main",
+  "version": "1.0.0",
+  "description": "tutoring project Frontend mentor",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch sass/style.scss:./css/style.css --style expanded",
+    "prefix": "postcss --use autoprefixer -b \"last 10 versions\" css/style.css -o css/style.prefix.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MartEvrd/FrontendMentor-InteractiveCardDetails.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MartEvrd/FrontendMentor-InteractiveCardDetails/issues"
+  },
+  "homepage": "https://github.com/MartEvrd/FrontendMentor-InteractiveCardDetails#readme"
+}
