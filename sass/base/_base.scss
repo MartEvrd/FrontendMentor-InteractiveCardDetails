@@ -1,8 +1,8 @@
 html{
     font-size: $font-standard-proportions;
-    margin: 0 auto;
+    margin: 0;
     @include desktop-screens{
-        // max-width: $global-page-max-width;
+        max-width: $global-page-max-width;
     }
 }
 

@@ -44,8 +44,14 @@ td, th {
 
 html {
   font-size: 62.5%;
-  margin: 0 auto;
+  margin: 0;
 }
+@media screen and (min-width: 481px) {
+  html {
+    max-width: 1400px;
+  }
+}
+
 body {
   margin: 0 auto;
   background-color: hsl(0, 0%, 100%);
@@ -67,9 +73,11 @@ body {
 }
 @media screen and (min-width: 481px) {
   .cards-bloc {
+    position: absolute;
     background-image: url(../images/bg-main-desktop.png);
     min-height: 100vh;
-    width: min(30vw, 400px);
+    width: 30vw;
+    max-width: 400px;
   }
 }
 
@@ -83,12 +91,12 @@ body {
   }
 }
 .card-container__item {
-  position: absolute;
-  max-width: min(250px, 75cqw);
+  position: fixed;
 }
 @media screen and (min-width: 481px) {
   .card-container__item {
-    max-width: min(25vw, 300px);
+    min-width: 300px;
+    max-width: min(25vw, 400px);
   }
 }
 .card-container__front {
@@ -98,7 +106,7 @@ body {
 @media screen and (min-width: 481px) {
   .card-container__front {
     top: 15vh;
-    left: 10vw;
+    left: min(10vw, 100px);
   }
 }
 .card-container__front--pic {
@@ -109,7 +117,8 @@ body {
 }
 @media screen and (min-width: 481px) {
   .card-container__front--pic {
-    max-width: min(25vw, 300px);
+    min-width: 300px;
+    max-width: min(25vw, 400px);
   }
 }
 .card-container__front--icon {
@@ -129,11 +138,11 @@ body {
   left: 4%;
   bottom: 35%;
   letter-spacing: 3px;
-  font-size: min(1.4rem, 4cqw);
+  font-size: min(0.9em, 4cqw);
 }
 @media screen and (min-width: 481px) {
   .card-container__front--number {
-    font-size: min(1.2rem, 1.2cqw);
+    font-size: min(2.2rem, 18px);
   }
 }
 .card-container__front--name {
@@ -147,7 +156,7 @@ body {
 }
 @media screen and (min-width: 481px) {
   .card-container__front--name {
-    font-size: min(0.7rem, 0.8cqw);
+    font-size: min(1rem, 0.8cqw);
   }
 }
 .card-container__front--date {
@@ -161,7 +170,7 @@ body {
 }
 @media screen and (min-width: 481px) {
   .card-container__front--date {
-    font-size: min(0.7rem, 0.8cqw);
+    font-size: min(1rem, 0.8cqw);
   }
 }
 .card-container__back {
@@ -171,8 +180,8 @@ body {
 }
 @media screen and (min-width: 481px) {
   .card-container__back {
-    top: 50vh;
-    left: 18vw;
+    top: calc(15vh + 250px);
+    left: min(15vw, 200px);
   }
 }
 .card-container__back--pic {
@@ -183,7 +192,8 @@ body {
 }
 @media screen and (min-width: 481px) {
   .card-container__back--pic {
-    max-width: min(25vw, 300px);
+    min-width: 300px;
+    max-width: min(25vw, 400px);
   }
 }
 .card-container__back--code {
@@ -193,10 +203,10 @@ body {
   right: 11%;
   bottom: 49%;
   letter-spacing: 3px;
-  font-size: min(0.8rem, 2.5cqw);
+  font-size: min(0.8em, 2.5cqw);
 }
 @media screen and (min-width: 481px) {
   .card-container__back--code {
-    font-size: min(0.7rem, 0.8cqw);
+    font-size: min(0.7em, 0.8cqw);
   }
 }/*# sourceMappingURL=style.css.map */
