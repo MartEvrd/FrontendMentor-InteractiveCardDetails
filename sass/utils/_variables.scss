@@ -1,0 +1,71 @@
+// --------------------------------
+// * PARAMETRES GENERAUX
+// --------------------------------
+
+// COULEURS
+$color-primary: hsl(0, 0%, 100%);
+$color-secondary: hsl(270, 3%, 87%);
+$color-tertiary: hsl(279, 6%, 55%);
+$color-main-dark: hsl(278, 68%, 11%);
+
+$color-bg-standard: $color-primary;
+
+$color-font-standard: $color-main-dark;
+$color-font-formulary: $color-tertiary;
+$color-font-button: $color-secondary;
+$color-font-card: $color-primary;
+
+// POSITIONNEMENTS
+$global-page-max-width: 1400px;
+$main-max-width: 1000px;
+
+$mobile-right_left-margins: 30px;
+$desktop-right-margin: 150px;
+$desktop-left-margin: 80px;
+
+// --------------------------------
+// * PARAMETRES POLICES GENERAUX
+// --------------------------------
+    // -> Initialisation taille
+$font-standard-proportions: 62.5%;
+    // -> Définition du standard
+$font-standard-package: (
+    weight: 500,
+    size: 1.6,
+    family: 'Space Grotesk',
+    color: $color-font-standard
+);
+    // -> Map de définitions de toutes les sortes de polices utilisées
+$font-package: (
+    // ! /!\ NE PAS MODIFIER /!\ -- Pour modifier ce kit de police, modifier directement la map '$font-standard-package'
+    standard: (
+        weight: map-get($font-standard-package, weight),
+        size: map-get($font-standard-package, size),
+        family: map-get($font-standard-package, family),
+        color: map-get($font-standard-package, color),
+    ),// ! /!\ --------------------------------------------------
+    form-placeholder: (
+        weight: 500,
+        size: 1.6,
+        family: 'Space Grotesk',
+        color: $color-font-formulary
+    ),
+    form-title: (
+        weight: 500,
+        size: 1.6,
+        family: 'Space Grotesk',
+        color: $color-font-standard
+    ),
+    card: (
+        weight: 500,
+        size: 2,
+        family: 'Space Grotesk',
+        color: $color-font-card
+    ),
+    button: (
+        weight: 500,
+        size: 1.6,
+        family: 'Space Grotesk',
+        color: $color-font-button
+    )
+);

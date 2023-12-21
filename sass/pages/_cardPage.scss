@@ -1,0 +1,119 @@
+.cards-bloc{
+    height: 220px;
+    width: auto;
+    background-image: url(../images/bg-main-mobile.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    @include desktop-screens{
+        background-image: url(../images/bg-main-desktop.png);
+        min-height: 100vh;
+        width: min(30vw, 400px);
+    }
+}
+
+.card-container{
+    width: 100%;
+    padding: 25px 25px 0px;
+    @include desktop-screens{
+        position: absolute;
+    }
+    &__item{
+        position: absolute;
+        max-width: min(250px, 75cqw);
+        @include desktop-screens{
+            max-width: min(25vw, 300px);
+        }
+    }
+    &__front{
+        z-index: 2;
+        top: 130px;
+        @include desktop-screens{
+            top: 15vh;
+            left: 10vw;
+        }
+        &--pic{
+            object-fit: cover;
+            width: 75cqw;
+            max-width: 250px;
+            @include desktop-screens{
+                max-width: min(25vw, 300px);
+            }
+        }
+        &--icon{
+            position: absolute;
+            width: 15%;
+            max-width: 60px;
+            z-index: 3;
+            top: 8%;
+            left: 4%;
+            box-shadow: none;
+            border-radius: 0;
+        }
+        &--number{
+            @include font-package(card);
+            position: absolute;
+            left: 4%;
+            bottom: 35%;
+            letter-spacing: 3px;
+            font-size: min(1.4rem, 4cqw);
+            @include desktop-screens{
+                font-size: min(1.2rem, 1.2cqw);
+            }
+        }
+        &--name{
+            @include font-package(card);
+            position: absolute;
+            left: 4%;
+            bottom: 15%;
+            letter-spacing: 3px;
+            font-size: min(0.8rem, 2.5cqw);
+            @include desktop-screens{
+                font-size: min(0.7rem, 0.8cqw);
+            }
+        }
+        &--date{
+            @include font-package(card);
+            position: absolute;
+            right: 10%;
+            bottom: 15%;
+            letter-spacing: 3px;
+            font-size: min(0.8rem, 2.5cqw);
+            @include desktop-screens{
+                font-size: min(0.7rem, 0.8cqw);
+            }
+        }
+    }
+
+    &__back{
+        z-index: 1;
+        top: 50px;
+        right: 5%;
+        @include desktop-screens{
+            top: 50vh;
+            left: 18vw;
+        }
+        &--pic{
+            object-fit: cover;
+            width: 75cqw;
+            max-width: 250px;
+            @include desktop-screens{
+                max-width: min(25vw, 300px);
+            }
+        }
+        &--code{
+            @include font-package(card);
+            position: absolute;
+            right: 11%;
+            bottom: 49%;
+            letter-spacing: 3px;
+            font-size: min(0.8rem, 2.5cqw);
+            @include desktop-screens{
+                font-size: min(0.7rem, 0.8cqw);
+            }
+        }
+    }
+
+
+    
+    
+}

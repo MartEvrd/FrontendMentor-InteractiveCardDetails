@@ -1,0 +1,56 @@
+
+// --------------------------------
+// * MEDIAS QUERIES - PARAMETRES GENERAUX
+// --------------------------------
+
+    // -> Mobile : jusqu'à 480px
+    // -> Au delà : ordinateurs
+
+$breakpoints: (
+    desktop: 481px,
+);
+
+// --------------------------------
+// * DESKTOP -- Package de polices
+// --------------------------------
+
+$desktop-font-standard-package: (
+    weight: 500,
+    size: 1.6,
+    family: 'Space Grotesk',
+    color: $color-font-standard
+);
+
+$font-package-desktop: (
+    // ! /!\ NE PAS MODIFIER /!\ -- Pour modifier ce kit de police, modifier directement la map '$touchapd-font-standard-package'
+    standard: (
+        weight: map-get($desktop-font-standard-package, weight),
+        size: map-get($desktop-font-standard-package, size),
+        family: map-get($desktop-font-standard-package, family),
+        color: map-get($desktop-font-standard-package, color),
+    ),// ! /!\ --------------------------------------------------
+    form-placeholder: (
+        weight: 500,
+        size: 1.6,
+        family: 'Space Grotesk',
+        color: $color-font-formulary
+    ),
+    form-title: (
+        weight: 500,
+        size: 1.6,
+        family: 'Space Grotesk',
+        color: $color-font-standard
+    ),
+    card: (
+        weight: 500,
+        size: 1.6,
+        family: 'Space Grotesk',
+        color: $color-font-card
+    ),
+    button: (
+        weight: 500,
+        size: 1.6,
+        family: 'Space Grotesk',
+        color: $color-font-button
+    )
+)

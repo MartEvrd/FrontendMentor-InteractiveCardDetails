@@ -1,0 +1,202 @@
+html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+button, input, select {
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+iframe {
+  border: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td, th {
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  margin: 0 auto;
+}
+body {
+  margin: 0 auto;
+  background-color: hsl(0, 0%, 100%);
+  font: 500 1.6rem "Space Grotesk", Arial, Verdana, sans-serif;
+  color: hsl(278, 68%, 11%);
+}
+@media screen and (min-width: 481px) {
+  body {
+    display: flex;
+  }
+}
+
+.cards-bloc {
+  height: 220px;
+  width: auto;
+  background-image: url(../images/bg-main-mobile.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media screen and (min-width: 481px) {
+  .cards-bloc {
+    background-image: url(../images/bg-main-desktop.png);
+    min-height: 100vh;
+    width: min(30vw, 400px);
+  }
+}
+
+.card-container {
+  width: 100%;
+  padding: 25px 25px 0px;
+}
+@media screen and (min-width: 481px) {
+  .card-container {
+    position: absolute;
+  }
+}
+.card-container__item {
+  position: absolute;
+  max-width: min(250px, 75cqw);
+}
+@media screen and (min-width: 481px) {
+  .card-container__item {
+    max-width: min(25vw, 300px);
+  }
+}
+.card-container__front {
+  z-index: 2;
+  top: 130px;
+}
+@media screen and (min-width: 481px) {
+  .card-container__front {
+    top: 15vh;
+    left: 10vw;
+  }
+}
+.card-container__front--pic {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 75cqw;
+  max-width: 250px;
+}
+@media screen and (min-width: 481px) {
+  .card-container__front--pic {
+    max-width: min(25vw, 300px);
+  }
+}
+.card-container__front--icon {
+  position: absolute;
+  width: 15%;
+  max-width: 60px;
+  z-index: 3;
+  top: 8%;
+  left: 4%;
+  box-shadow: none;
+  border-radius: 0;
+}
+.card-container__front--number {
+  font: 500 2rem "Space Grotesk", Arial, Verdana, sans-serif;
+  color: hsl(0, 0%, 100%);
+  position: absolute;
+  left: 4%;
+  bottom: 35%;
+  letter-spacing: 3px;
+  font-size: min(1.4rem, 4cqw);
+}
+@media screen and (min-width: 481px) {
+  .card-container__front--number {
+    font-size: min(1.2rem, 1.2cqw);
+  }
+}
+.card-container__front--name {
+  font: 500 2rem "Space Grotesk", Arial, Verdana, sans-serif;
+  color: hsl(0, 0%, 100%);
+  position: absolute;
+  left: 4%;
+  bottom: 15%;
+  letter-spacing: 3px;
+  font-size: min(0.8rem, 2.5cqw);
+}
+@media screen and (min-width: 481px) {
+  .card-container__front--name {
+    font-size: min(0.7rem, 0.8cqw);
+  }
+}
+.card-container__front--date {
+  font: 500 2rem "Space Grotesk", Arial, Verdana, sans-serif;
+  color: hsl(0, 0%, 100%);
+  position: absolute;
+  right: 10%;
+  bottom: 15%;
+  letter-spacing: 3px;
+  font-size: min(0.8rem, 2.5cqw);
+}
+@media screen and (min-width: 481px) {
+  .card-container__front--date {
+    font-size: min(0.7rem, 0.8cqw);
+  }
+}
+.card-container__back {
+  z-index: 1;
+  top: 50px;
+  right: 5%;
+}
+@media screen and (min-width: 481px) {
+  .card-container__back {
+    top: 50vh;
+    left: 18vw;
+  }
+}
+.card-container__back--pic {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 75cqw;
+  max-width: 250px;
+}
+@media screen and (min-width: 481px) {
+  .card-container__back--pic {
+    max-width: min(25vw, 300px);
+  }
+}
+.card-container__back--code {
+  font: 500 2rem "Space Grotesk", Arial, Verdana, sans-serif;
+  color: hsl(0, 0%, 100%);
+  position: absolute;
+  right: 11%;
+  bottom: 49%;
+  letter-spacing: 3px;
+  font-size: min(0.8rem, 2.5cqw);
+}
+@media screen and (min-width: 481px) {
+  .card-container__back--code {
+    font-size: min(0.7rem, 0.8cqw);
+  }
+}/*# sourceMappingURL=style.css.map */
