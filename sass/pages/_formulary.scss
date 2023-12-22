@@ -32,6 +32,8 @@
     &__button{
         width: 100%;
         background-color: $color-main-dark;
+        outline: none;
+        border: none;
         border-radius: 8px;
         height: 50px;
         cursor: pointer;

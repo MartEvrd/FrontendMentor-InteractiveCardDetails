@@ -22,10 +22,10 @@
         position: absolute;
     }
     &__item{
-        position: fixed;
+        position: absolute;
         @include desktop-screens{
             min-width: 300px;
-            max-width: min(25vw, 400px);
+            width: min(25vw, 400px);
         }
         &--pic{
             object-fit: cover;
@@ -108,6 +108,7 @@
             letter-spacing: 3px;
             font-size: min(0.8em, 2.5cqw);
             @include desktop-screens{
+                // right: -19%;
                 font-size: max(0.7cqw, 1rem);
             }
         }

@@ -114,12 +114,12 @@ header {
   }
 }
 .card-container__item {
-  position: fixed;
+  position: absolute;
 }
 @media screen and (min-width: 577px) {
   .card-container__item {
     min-width: 300px;
-    max-width: min(25vw, 400px);
+    width: min(25vw, 400px);
   }
 }
 .card-container__item--pic {
@@ -267,6 +267,8 @@ header {
 .card-form__button {
   width: 100%;
   background-color: hsl(277, 69%, 18%);
+  outline: none;
+  border: none;
   border-radius: 8px;
   height: 50px;
   cursor: pointer;
