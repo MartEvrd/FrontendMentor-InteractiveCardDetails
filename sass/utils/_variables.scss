@@ -6,12 +6,12 @@
 $color-primary: hsl(0, 0%, 100%);
 $color-secondary: hsl(270, 3%, 87%);
 $color-tertiary: hsl(279, 6%, 55%);
-$color-main-dark: hsl(278, 68%, 11%);
+$color-main-dark: hsl(277, 69%, 18%);
 
 $color-bg-standard: $color-primary;
 
 $color-font-standard: $color-main-dark;
-$color-font-formulary: $color-tertiary;
+$color-font-placeholder: $color-secondary;
 $color-font-button: $color-secondary;
 $color-font-card: $color-primary;
 
@@ -48,7 +48,7 @@ $font-package: (
         weight: 500,
         size: 1.6,
         family: 'Space Grotesk',
-        color: $color-font-formulary
+        color: $color-font-placeholder
     ),
     form-title: (
         weight: 500,

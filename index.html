@@ -24,21 +24,45 @@
     </div>
     <div class="card-container">
       <div class="card-container__item card-container__front">
-        <img src="./images/bg-card-front.png" alt="front card" class="card-container__front--pic">
+        <img src="./images/bg-card-front.png" alt="front card" class="card-container__item--pic">
         <img src="./images/card-logo.svg" alt="Dot card icon" class="card-container__front--icon">
         <p class="card-container__front--number">0000 0000 0000 0000</p>
         <p class="card-container__front--name">MARTIN EVRARD</p>
         <p class="card-container__front--date">00/00</p>
       </div>
       <div class="card-container__item card-container__back">
-        <img src="./images/bg-card-back.png" alt="front card" class="card-container__back--pic">
+        <img src="./images/bg-card-back.png" alt="front card" class="card-container__item--pic">
         <p class="card-container__back--code">000</p>
       </div>
     </div>
   </header>
 
   <main>
-    <!-- <p>Hello World</p> -->
+    <div class="formulary-container">
+      <form class="card-form">
+        <label for="name" class="card-form__label">CARDHOLDER NAME</label>
+        <input type="text" name="name" placeholder="ex : Martin Evrard" class="card-form__input">
+
+        <label for="number" class="card-form__label">CARD NUMBER</label>
+        <input type="text" name="number" placeholder="ex : 1234567891230000" class="card-form__input">
+
+        <div class="card-form__exp-code">
+          <div>
+            <label for="exp-month" class="card-form__label">EXP. DATE (MM/YY)</label>
+            <div class="card-form__exp-code--exp">
+              <input type="test" name="exp-month" placeholder="MM" class="card-form__input">
+              <input type="text" name="exp-year" placeholder="YY" class="card-form__input">
+            </div>
+          </div>
+          <div class="card-form__exp-code--code">
+            <label for="code" class="card-form__label">CVC</label>
+            <input type="text" name="code" placeholder="ex: 123" class="card-form__input">
+          </div>
+        </div>
+
+        <button class="card-form__button">Confirm</button>
+      </form>
+    </div>
   </main>
 
 </body>

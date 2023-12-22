@@ -1,0 +1,11 @@
+header {
+    height: calc(130px + (75vw / 1.82));
+    max-height: calc(130px + (250px / 1.82));
+    margin-bottom: 40px;
+    @include desktop-screens{
+        min-width: max(
+            calc(min(15vw, 200px) + 300px),
+            calc(min(15vw, 200px) + min(25vw, 400px)));
+        margin-right: 50px;
+    }
+}

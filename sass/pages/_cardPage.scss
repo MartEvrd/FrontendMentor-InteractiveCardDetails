@@ -4,6 +4,7 @@
     background-image: url(../images/bg-main-mobile.png);
     background-size: cover;
     background-repeat: no-repeat;
+    filter: brightness(130%);
     @include desktop-screens{
         position: absolute;
         background-image: url(../images/bg-main-desktop.png);
@@ -17,6 +18,7 @@
     width: 100%;
     padding: 25px 25px 0px;
     @include desktop-screens{
+        width: auto;
         position: absolute;
     }
     &__item{
@@ -25,6 +27,16 @@
             min-width: 300px;
             max-width: min(25vw, 400px);
         }
+        &--pic{
+            object-fit: cover;
+            width: 75vw;
+            max-width: 250px;
+            filter:saturate(1.5);
+            @include desktop-screens{
+                min-width: 300px;
+                max-width: min(25vw, 400px);
+            }
+        }
     }
     &__front{
         z-index: 2;
@@ -32,15 +44,6 @@
         @include desktop-screens{
             top: 15vh;
             left: min(10vw, 100px);
-        }
-        &--pic{
-            object-fit: cover;
-            width: 75cqw;
-            max-width: 250px;
-            @include desktop-screens{
-                min-width: 300px;
-                max-width: min(25vw, 400px);
-            }
         }
         &--icon{
             position: absolute;
@@ -60,7 +63,7 @@
             letter-spacing: 3px;
             font-size: min(0.9em, 4cqw);
             @include desktop-screens{
-                font-size: min(2.2rem, 18px);
+                font-size: max(1.4cqw, 1.8rem);
             }
         }
         &--name{
@@ -71,7 +74,7 @@
             letter-spacing: 3px;
             font-size: min(0.8rem, 2.5cqw);
             @include desktop-screens{
-                font-size: min(1rem, 0.8cqw);
+                font-size: max(0.7cqw, 1rem);
             }
         }
         &--date{
@@ -82,7 +85,7 @@
             letter-spacing: 3px;
             font-size: min(0.8rem, 2.5cqw);
             @include desktop-screens{
-                font-size: min(1rem, 0.8cqw);
+                font-size: max(0.7cqw, 1rem);
             }
         }
     }
@@ -92,27 +95,20 @@
         top: 50px;
         right: 5%;
         @include desktop-screens{
-            top: calc(15vh + 250px);
+            top: max(
+                calc(15vh + (300px / 1.82) + 25px),
+                calc(15vh + (min(25vw, 400px) / 1.82) + 25px));
             left: min(15vw, 200px);
-        }
-        &--pic{
-            object-fit: cover;
-            width: 75cqw;
-            max-width: 250px;
-            @include desktop-screens{
-                min-width: 300px;
-                max-width: min(25vw, 400px);
-            }
         }
         &--code{
             @include font-package(card);
             position: absolute;
             right: 11%;
-            bottom: 49%;
+            bottom: 48%;
             letter-spacing: 3px;
             font-size: min(0.8em, 2.5cqw);
             @include desktop-screens{
-                font-size: min(0.7em, 0.8cqw);
+                font-size: max(0.7cqw, 1rem);
             }
         }
     }

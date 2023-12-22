@@ -7,7 +7,7 @@
     // -> Au delà : ordinateurs
 
 $breakpoints: (
-    desktop: 481px,
+    desktop: 577px,
 );
 
 // --------------------------------
@@ -33,7 +33,7 @@ $font-package-desktop: (
         weight: 500,
         size: 1.6,
         family: 'Space Grotesk',
-        color: $color-font-formulary
+        color: $color-font-placeholder
     ),
     form-title: (
         weight: 500,
