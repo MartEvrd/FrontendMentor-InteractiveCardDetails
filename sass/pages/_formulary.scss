@@ -11,21 +11,40 @@
     @include font-package(form-title);
     display: block;
     margin-bottom: 5px;
+    margin-top: 20px;
+    &--first{
+        margin-top: 0px;
+    }
 }
 .card-form__input{
+    position: relative;
+    z-index: 1;
     width: 100%;
     height: 50px;
     border-radius: 8px;
     outline: none;
     border: $color-secondary solid 2px;
     @include font-package(standard);
-    margin-bottom: 20px;
+    // margin-bottom: 20px;
     padding-left: 10px;
     &:focus{
-        border-color: $color-main-dark;
+        width: 100%;
+        height: 50px;
+        border-radius: 8px;
+        border: solid 3px transparent;
+        background-image: 
+                linear-gradient(white, white), 
+                linear-gradient(45deg, hsl(249, 99%, 64%), hsl(278, 94%, 30%));
+        background-origin: border-box;
+        background-clip: padding-box, border-box;
     }
     &::placeholder{
         @include font-package(form-placeholder);
+    }
+    &.errShake{
+        border-width: 5px;
+        animation: shakeInput 0.2s 2;
+        border-color: red;
     }
 }
 .card-form{
@@ -36,6 +55,7 @@
         border: none;
         border-radius: 8px;
         height: 50px;
+        margin-top: 30px;
         cursor: pointer;
         @include font-package(button)
     }
@@ -48,4 +68,25 @@
             column-gap: 10px;
         }
     }
+    &__errorMessage{
+        display: none;
+        color: $color-font-error;
+        margin-top: 5px;
+        text-align: center;
+        @include desktop-screens{
+            text-align: left;
+        }
+        &.show-msg{
+            display: block;
+            animation: errorMsg 3s forwards; /* Applique l'animation lorsque la classe show-animation est ajoutée */
+        }
+        &.align-right{
+            @include desktop-screens{
+                text-align: right;
+            }
+        }
+    }
+}
+#card-number{
+    letter-spacing: 3px;
 }

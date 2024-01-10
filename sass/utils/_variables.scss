@@ -14,6 +14,9 @@ $color-font-standard: $color-main-dark;
 $color-font-placeholder: $color-secondary;
 $color-font-button: $color-secondary;
 $color-font-card: $color-primary;
+$color-font-error: hsl(0, 100%, 66%);
+
+$color-form-borders-focus: linear-gradient(hsl(249, 99%, 64%),hsl(278, 94%, 30%));
 
 // POSITIONNEMENTS
 $global-page-max-width: 1400px;

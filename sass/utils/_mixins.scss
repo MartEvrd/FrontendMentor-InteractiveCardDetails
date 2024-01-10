@@ -25,3 +25,9 @@
         @content;
     }
 }
+
+@mixin large-screens {
+    @media screen and (min-width: map-get($breakpoints, large-screens)){
+        @content;
+    }
+}

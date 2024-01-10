@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
@@ -73,6 +74,39 @@ main {
   }
 }
 
+@keyframes errorMsg {
+  0% {
+    transform: translateY(-20px);
+  }
+  20% {
+    transform: translateY(0);
+  }
+  95% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    display: none;
+    opacity: 0;
+  }
+}
+@keyframes shakeInput {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(5px);
+  }
+  50% {
+    transform: translateX(-5px);
+  }
+  75% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 header {
   height: calc(130px + 41.2087912088vw);
   max-height: 267.3626373626px;
@@ -169,6 +203,11 @@ header {
     font-size: max(1.4cqw, 1.8rem);
   }
 }
+@media screen and (min-width: 1600px) {
+  .card-container__front--number {
+    font-size: 1.6em;
+  }
+}
 .card-container__front--name {
   font: 500 2rem "Space Grotesk", Arial, Verdana, sans-serif;
   color: hsl(0, 0%, 100%);
@@ -183,6 +222,11 @@ header {
     font-size: max(0.7cqw, 1rem);
   }
 }
+@media screen and (min-width: 1600px) {
+  .card-container__front--name {
+    font-size: 0.8em;
+  }
+}
 .card-container__front--date {
   font: 500 2rem "Space Grotesk", Arial, Verdana, sans-serif;
   color: hsl(0, 0%, 100%);
@@ -195,6 +239,11 @@ header {
 @media screen and (min-width: 577px) {
   .card-container__front--date {
     font-size: max(0.7cqw, 1rem);
+  }
+}
+@media screen and (min-width: 1600px) {
+  .card-container__front--date {
+    font-size: 0.8em;
   }
 }
 .card-container__back {
@@ -222,6 +271,11 @@ header {
     font-size: max(0.7cqw, 1rem);
   }
 }
+@media screen and (min-width: 1600px) {
+  .card-container__back--code {
+    font-size: 0.8em;
+  }
+}
 
 .formulary-container {
   padding: 0px 25px;
@@ -239,9 +293,15 @@ header {
   color: hsl(277, 69%, 18%);
   display: block;
   margin-bottom: 5px;
+  margin-top: 20px;
+}
+.card-form__label--first {
+  margin-top: 0px;
 }
 
 .card-form__input {
+  position: relative;
+  z-index: 1;
   width: 100%;
   height: 50px;
   border-radius: 8px;
@@ -249,11 +309,16 @@ header {
   border: hsl(270, 3%, 87%) solid 2px;
   font: 500 1.6rem "Space Grotesk", Arial, Verdana, sans-serif;
   color: hsl(277, 69%, 18%);
-  margin-bottom: 20px;
   padding-left: 10px;
 }
 .card-form__input:focus {
-  border-color: hsl(277, 69%, 18%);
+  width: 100%;
+  height: 50px;
+  border-radius: 8px;
+  border: solid 3px transparent;
+  background-image: linear-gradient(white, white), linear-gradient(45deg, hsl(249, 99%, 64%), hsl(278, 94%, 30%));
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
 }
 .card-form__input::-moz-placeholder {
   font: 500 1.6rem "Space Grotesk", Arial, Verdana, sans-serif;
@@ -263,6 +328,11 @@ header {
   font: 500 1.6rem "Space Grotesk", Arial, Verdana, sans-serif;
   color: hsl(270, 3%, 87%);
 }
+.card-form__input.errShake {
+  border-width: 5px;
+  animation: shakeInput 0.2s 2;
+  border-color: red;
+}
 
 .card-form__button {
   width: 100%;
@@ -271,6 +341,7 @@ header {
   border: none;
   border-radius: 8px;
   height: 50px;
+  margin-top: 30px;
   cursor: pointer;
   font: 500 1.6rem "Space Grotesk", Arial, Verdana, sans-serif;
   color: hsl(270, 3%, 87%);
@@ -285,4 +356,28 @@ header {
   display: flex;
   -moz-column-gap: 10px;
        column-gap: 10px;
+}
+.card-form__errorMessage {
+  display: none;
+  color: hsl(0, 100%, 66%);
+  margin-top: 5px;
+  text-align: center;
+}
+@media screen and (min-width: 577px) {
+  .card-form__errorMessage {
+    text-align: left;
+  }
+}
+.card-form__errorMessage.show-msg {
+  display: block;
+  animation: errorMsg 3s forwards; /* Applique l'animation lorsque la classe show-animation est ajoutée */
+}
+@media screen and (min-width: 577px) {
+  .card-form__errorMessage.align-right {
+    text-align: right;
+  }
+}
+
+#card-number {
+  letter-spacing: 3px;
 }/*# sourceMappingURL=style.css.map */

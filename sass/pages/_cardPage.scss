@@ -65,6 +65,9 @@
             @include desktop-screens{
                 font-size: max(1.4cqw, 1.8rem);
             }
+            @include large-screens{
+                font-size: 1.6em;
+            }
         }
         &--name{
             @include font-package(card);
@@ -76,6 +79,9 @@
             @include desktop-screens{
                 font-size: max(0.7cqw, 1rem);
             }
+            @include large-screens{
+                font-size: 0.8em;
+            }
         }
         &--date{
             @include font-package(card);
@@ -86,6 +92,9 @@
             font-size: min(0.8rem, 2.5cqw);
             @include desktop-screens{
                 font-size: max(0.7cqw, 1rem);
+            }
+            @include large-screens{
+                font-size: 0.8em;
             }
         }
     }
@@ -110,6 +119,9 @@
             @include desktop-screens{
                 // right: -19%;
                 font-size: max(0.7cqw, 1rem);
+            }
+            @include large-screens{
+                font-size: 0.8em;
             }
         }
     }

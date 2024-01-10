@@ -26,7 +26,7 @@
       <div class="card-container__item card-container__front">
         <img src="./images/bg-card-front.png" alt="front card" class="card-container__item--pic">
         <img src="./images/card-logo.svg" alt="Dot card icon" class="card-container__front--icon">
-        <p class="card-container__front--number">0000 0000 0000 0000</p>
+        <p class="card-container__front--number" id="card-container-number">0000 0000 0000 0000</p>
         <p class="card-container__front--name">MARTIN EVRARD</p>
         <p class="card-container__front--date">00/00</p>
       </div>
@@ -40,30 +40,41 @@
   <main>
     <div class="formulary-container">
       <form class="card-form">
-        <label for="name" class="card-form__label">CARDHOLDER NAME</label>
-        <input type="text" name="name" placeholder="ex : Martin Evrard" class="card-form__input">
+        <label for="name" class="card-form__label card-form__label--first">CARDHOLDER NAME</label>
+        <input type="text" name="name" placeholder="ex : Martin Evrard" class="card-form__input"  id="card-name">
+        <p class="card-form__errorMessage" id="errMess-nameFormat">The name only contains letters, "-", " ' " </p>
+        <p class="card-form__errorMessage" id="errMess-nameLength">The name can't exceed 20 characters </p>
 
         <label for="number" class="card-form__label">CARD NUMBER</label>
-        <input type="text" name="number" placeholder="ex : 1234567891230000" class="card-form__input">
+        <input type="text" name="number" placeholder="ex : 1234 5678 9123 0000" class="card-form__input" id="card-number">
+        <p class="card-form__errorMessage" id="errMess-numFormat">The card number only contains numbers</p>
+        <p class="card-form__errorMessage" id="errMess-numLength">The Card number has 16 numbers</p>
 
         <div class="card-form__exp-code">
           <div>
             <label for="exp-month" class="card-form__label">EXP. DATE (MM/YY)</label>
             <div class="card-form__exp-code--exp">
-              <input type="test" name="exp-month" placeholder="MM" class="card-form__input">
-              <input type="text" name="exp-year" placeholder="YY" class="card-form__input">
+              <input type="text" name="exp-month" placeholder="MM" class="card-form__input"  id="card-month">
+              <input type="text" name="exp-year" placeholder="YY" class="card-form__input"  id="card-year">
             </div>
           </div>
           <div class="card-form__exp-code--code">
             <label for="code" class="card-form__label">CVC</label>
-            <input type="text" name="code" placeholder="ex: 123" class="card-form__input">
+            <input type="text" name="code" placeholder="ex: 123" class="card-form__input"  id="card-code">
           </div>
         </div>
+        <p class="card-form__errorMessage" id="errMess-dateMonthFormat">The month has to be between 01-12</p>
+        <p class="card-form__errorMessage" id="errMess-dateYearFormat">The year has to be between 2020 - 2050</p>
+        <p class="card-form__errorMessage" id="errMess-dateFormat">The month & year only contain numbers</p>
+        <p class="card-form__errorMessage" id="errMess-dateLength">The month & year have 2 numbers</p>
+
+        <p class="card-form__errorMessage align-right" id="errMess-codeFormat">The code only contains numbers</p>
+        <p class="card-form__errorMessage align-right" id="errMess-codeLength">The code has 3 numbers</p>
 
         <button class="card-form__button">Confirm</button>
       </form>
     </div>
   </main>
-
+  <script type="module" src="./js/script.js"></script>
 </body>
 </html>
