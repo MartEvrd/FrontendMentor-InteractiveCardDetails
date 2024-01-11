@@ -20,6 +20,15 @@ function showErrMsg(errMsg, input){
     }, 3500);
 }
 
+const form = document.getElementById("cardForm");
+const confirmation = document.getElementById("confirmationContainer");
+function submitForm(event) {
+    event.preventDefault();
+    form.classList.add("hide");
+    confirmation.classList.remove("hide");
+}
+form.addEventListener('submit', submitForm);
+
 // * Card Name
 const defaultVisualNameValue = "MARTIN EVRARD";
 const cardNameInput = document.getElementById("card-name");
@@ -230,3 +239,18 @@ cardCodeInput.addEventListener('input', function(event) {
     }
 })
 
+// * Confirmation button to initialize app
+
+function initializeVisuals(){
+    cardCodeVisual.textContent = defaultVisualCodeValue;
+    cardDateVisual.textContent = defaultVisualDateValue+"/"+defaultVisualDateValue;
+    cardNumberVisual.textContent = defaultVisualNumberValue;
+    cardNameVisual.textContent = defaultVisualNameValue;
+}
+
+const exitButton = document.getElementById("exitButton");
+exitButton.addEventListener('click', (event) => {
+    form.classList.remove("hide");
+    confirmation.classList.add("hide");
+    location.reload();
+})

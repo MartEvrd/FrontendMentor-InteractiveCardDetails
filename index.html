@@ -38,8 +38,8 @@
   </header>
 
   <main>
-    <div class="formulary-container">
-      <form class="card-form">
+    <div class="main-container">
+      <form class="card-form" id="cardForm">
         <label for="name" class="card-form__label card-form__label--first">CARDHOLDER NAME</label>
         <input type="text" name="name" placeholder="ex : Martin Evrard" class="card-form__input"  id="card-name">
         <p class="card-form__errorMessage" id="errMess-nameFormat">The name only contains letters, "-", " ' " </p>
@@ -71,8 +71,17 @@
         <p class="card-form__errorMessage align-right" id="errMess-codeFormat">The code only contains numbers</p>
         <p class="card-form__errorMessage align-right" id="errMess-codeLength">The code has 3 numbers</p>
 
-        <button class="card-form__button">Confirm</button>
+        <button type="submit" class="card-form__button">Confirm</button>
       </form>
+      <div class="confirmation-container hide" id="confirmationContainer">
+        <div class="confirmation-bloc">
+          <img src="./images/icon-complete.svg" alt="Completed icon" class="confirmation-bloc__icon">
+          <h1 class="confirmation-bloc__title">THANK YOU !</h1>
+          <p>We've added your card details !</p>
+          <button id="exitButton">Continue</button>
+        </div>
+        
+      </div>
     </div>
   </main>
   <script type="module" src="./js/script.js"></script>

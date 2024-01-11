@@ -1,0 +1,13 @@
+.main-container{
+    padding: 0px 25px;
+    width: 100%;
+    @include desktop-screens{
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+.hide{
+    display: none;
+}

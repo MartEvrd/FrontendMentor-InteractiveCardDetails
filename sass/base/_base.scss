@@ -21,6 +21,7 @@ main{
         calc(130px + (75vw / 1.82)),
         calc(130px + (250px / 1.82))
     ));
+    width: 100%;
     @include desktop-screens{
         height: 100vh;
     }

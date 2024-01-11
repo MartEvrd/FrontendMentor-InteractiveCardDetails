@@ -1,0 +1,39 @@
+.confirmation-bloc{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 550px;
+    &__icon {
+        animation: rollConfirmation 1.2s cubic-bezier(.71,.08,.26,.98);
+        width: 30%;
+        margin-bottom: 40px;
+        @include desktop-screens{
+            width: 9cqw;
+        }
+    }
+    &__title{
+        @include font-package(confirmation-title);
+        font-size: min(4rem, 4cqw);
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    & p {
+        color: $color-tertiary;
+        font-size: min(2rem, 2cqw);
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    & button{
+        @include font-package(button);
+        width: 100%;
+        background-color: $color-main-dark;
+        outline: none;
+        border: none;
+        border-radius: 8px;
+        height: 50px;
+        cursor: pointer;
+        @include font-package(button)
+    }
+
+}

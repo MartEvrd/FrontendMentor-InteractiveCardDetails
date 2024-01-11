@@ -67,6 +67,7 @@ body {
 
 main {
   height: calc(100vh - 40px - min(130px + 41.2087912088vw, 267.3626373626px));
+  width: 100%;
 }
 @media screen and (min-width: 577px) {
   main {
@@ -107,6 +108,14 @@ main {
     transform: translateX(0);
   }
 }
+@keyframes rollConfirmation {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(1080deg);
+  }
+}
 header {
   height: calc(130px + 41.2087912088vw);
   max-height: 267.3626373626px;
@@ -117,6 +126,22 @@ header {
     min-width: max(min(15vw, 200px) + 300px, min(15vw, 200px) + min(25vw, 400px));
     margin-right: 50px;
   }
+}
+
+.main-container {
+  padding: 0px 25px;
+  width: 100%;
+}
+@media screen and (min-width: 577px) {
+  .main-container {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.hide {
+  display: none;
 }
 
 .cards-bloc {
@@ -277,17 +302,6 @@ header {
   }
 }
 
-.formulary-container {
-  padding: 0px 25px;
-}
-@media screen and (min-width: 577px) {
-  .formulary-container {
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-}
-
 .card-form__label {
   font: 500 1.6rem "Space Grotesk", Arial, Verdana, sans-serif;
   color: hsl(277, 69%, 18%);
@@ -334,6 +348,9 @@ header {
   border-color: red;
 }
 
+.card-form {
+  width: 100%;
+}
 .card-form__button {
   width: 100%;
   background-color: hsl(277, 69%, 18%);
@@ -348,14 +365,16 @@ header {
 }
 .card-form__exp-code {
   display: flex;
+  justify-content: space-between;
   align-items: flex-end;
   -moz-column-gap: 20px;
        column-gap: 20px;
+  width: 100%;
 }
 .card-form__exp-code--exp {
   display: flex;
-  -moz-column-gap: 10px;
-       column-gap: 10px;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
 }
 .card-form__errorMessage {
   display: none;
@@ -380,4 +399,48 @@ header {
 
 #card-number {
   letter-spacing: 3px;
+}
+
+.confirmation-bloc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 550px;
+}
+.confirmation-bloc__icon {
+  animation: rollConfirmation 1.2s cubic-bezier(0.71, 0.08, 0.26, 0.98);
+  width: 30%;
+  margin-bottom: 40px;
+}
+@media screen and (min-width: 577px) {
+  .confirmation-bloc__icon {
+    width: 9cqw;
+  }
+}
+.confirmation-bloc__title {
+  font: 500 3rem "Space Grotesk", Arial, Verdana, sans-serif;
+  color: hsl(277, 69%, 18%);
+  font-size: min(4rem, 4cqw);
+  text-align: center;
+  margin-bottom: 30px;
+}
+.confirmation-bloc p {
+  color: hsl(279, 6%, 55%);
+  font-size: min(2rem, 2cqw);
+  text-align: center;
+  margin-bottom: 50px;
+}
+.confirmation-bloc button {
+  font: 500 1.6rem "Space Grotesk", Arial, Verdana, sans-serif;
+  color: hsl(270, 3%, 87%);
+  width: 100%;
+  background-color: hsl(277, 69%, 18%);
+  outline: none;
+  border: none;
+  border-radius: 8px;
+  height: 50px;
+  cursor: pointer;
+  font: 500 1.6rem "Space Grotesk", Arial, Verdana, sans-serif;
+  color: hsl(270, 3%, 87%);
 }/*# sourceMappingURL=style.css.map */
