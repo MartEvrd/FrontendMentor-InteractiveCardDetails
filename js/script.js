@@ -250,7 +250,5 @@ function initializeVisuals(){
 
 const exitButton = document.getElementById("exitButton");
 exitButton.addEventListener('click', (event) => {
-    form.classList.remove("hide");
-    confirmation.classList.add("hide");
     location.reload();
 })
